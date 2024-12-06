@@ -1,0 +1,314 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fbebdb;
+    zoom: 0.9; /* 1.0 is the default, 1.2 is 120% zoom */
+
+}
+
+/* App Bar Styles */
+.app-bar {
+    background-color: #d89298;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdfd9;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Aligns the content-wrapper items to the left */
+    align-items: flex-start;
+    margin: 50px;
+}
+
+/* Card Form Container */
+.card-form-container {
+    width: 50%; /* Increase the width */
+    background: #fbebdb;
+    padding: 40px;
+}
+
+/* Card Form Container Header */
+.card-form-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card-form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #77b0a2;
+}
+
+.card-form-container input,
+.card-form-container textarea,
+.radio-group label {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.card-form-container input:focus,
+.card-form-container textarea:focus {
+    border-color: #88cabc;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Radio Group for Number of Stamps */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 10px; /* Add spacing between items */
+    padding: 15px 0;
+}
+
+.radio-group input[type="radio"] {
+    display: none; /* Hide the default radio buttons */
+}
+
+.radio-group label {
+    width: 18%; /* Adjust width so 5 items fit in a row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
+    text-align: center; /* Center text inside label */
+    margin: 5px 0; /* Add margin for spacing */
+}
+
+/* Selected Radio Button Style */
+.radio-group input[type="radio"]:checked + label {
+    background-color: #88cabc;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Button Styles */
+.card-form-container button {
+    background-color: #88cabc;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card-form-container button:hover {
+    background-color: #77b0a2;
+    transform: translateY(-2px);
+}
+
+/* File Input */
+input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Card Preview Container */
+.card-preview-container {
+    width: 20%;
+    background-color: #fbebdb;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    height: auto;
+    z-index: 1000;
+    animation: flyInFromBottom 1s ease-in-out;
+    opacity: 1; /* Ensure visibility */
+    
+}
+
+.card-preview-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Phone Frame */
+.phone-frame {
+    width: 350px;
+    height: 700px;
+    background-image: url('image/emtyphone.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Preview */
+.card-preview {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #88cabc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Logo Preview */
+.logo-preview {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Title and Description */
+.card-title {
+
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Stamp Styles */
+.stamp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* QR Code */
+.qr-code {
+    width: 170px;
+    height: 130px;
+    margin-top: 20px;
+}
+
+/* Icon Options Styling */
+.icon-options {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.icon-options input[type="radio"] {
+    display: none;
+}
+
+.icon-options label {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Style the Icon Images */
+.icon-image {
+    width: 50px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-options input[type="radio"]:checked + label .icon-image {
+    border-color: #88cabc;
+    transform: scale(1.1);
+}
+
+.icon-options label .icon-image:hover {
+    border-color: #77b0a2;
+    transform: scale(1.05);
+}
+ label {
+    font-size: 20px;
+    cursor: default;
+}
+
+/* Icon Preview Inside the Stamp */
+.icon-image-preview {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.icon-image-preview:hover {
+    transform: scale(1.1);
+}
+footer {
+    background-color: #d89298;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links a:hover, .nav-links a:active {
+    background-color: #b64d57;
+    border-radius: 5px;
+}
+/* Add the fly-in animation from down to up */
+@keyframes flyInFromBottom {
+    0% {
+        transform: translateY(100%); /* Start from below the screen */
+        opacity: 0; /* Start with invisible */
+    }
+    100% {
+        transform: translateY(0); /* Fly to the original position */
+        opacity: 1; /* Become fully visible */
+    }
+}

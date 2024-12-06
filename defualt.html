@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scan</title>
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <style>
+        #qr-reader {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="qr-reader"></div>
+    <div id="card-container">Card content will update here</div>
+
+    <script>
+        // Function to update the card content
+        function updateCard() {
+            document.getElementById('card-container').innerText = 'Card Updated with QR Code Scan!';
+        }
+
+        // Initialize the QR Code reader
+        const qrCodeElement = document.getElementById('qr-reader');
+        
+        function onScanSuccess(decodedText, decodedResult) {
+            // When a QR code is successfully scanned, this function is called
+            console.log(`Code matched: ${decodedText}`, decodedResult);
+            updateCard(); // Update the card when a QR code is scanned
+        }
+
+        function onScanFailure(error) {
+            // handle scan failure, usually better to ignore in this case
+            console.warn(`QR Code scan error: ${error}`);
+        }
+
+        // Create a new Html5QrcodeScanner instance
+        const html5QrCode = new Html5Qrcode("qr-reader");
+
+        // Start scanning with default settings
+        html5QrCode.start(
+            { facingMode: "environment" }, // Select the back camera
+            {
+                fps: 10,    // Set the scanning frequency to 10 frames per second
+                qrbox: 250  // Set the scanning box size to 250x250 pixels
+            },
+            onScanSuccess,
+            onScanFailure
+        ).catch((err) => {
+            console.error(`Unable to start scanning: ${err}`);
+        });
+    </script>
+</body>
+</html>

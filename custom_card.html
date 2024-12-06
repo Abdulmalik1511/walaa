@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Custom Stamp Card</title>
+    <link rel="stylesheet" href="custom_card_styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-bar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons_image/logo.png" alt="Business Logo" class="logo-image">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="my_cards.html">My Card</a>
+            <a href="custom_card.html">Create Card</a>
+            <a href="scan_cards.html">Scan page</a>
+        </nav>
+    </header>
+<main>
+    <!-- Content Wrapper to place form and preview side by side -->
+    <div class="content-wrapper">
+        <!-- Create Stamp Card Form -->
+        <div class="card-form-container" id="create-card">
+            <h2>Create Your Custom Stamp Card</h2>
+            <form id="stamp-card-form">
+                <label for="card-title">Card Title:</label>
+                <input type="text" id="card-title" name="card-title" placeholder="Enter card title" required>
+
+                <label for="card-description">Description:</label>
+                <textarea id="card-description" name="card-description" placeholder="Enter card description" rows="4" required></textarea>
+       <!-- New: Upload Your Logo -->
+       <label for="logo-upload">Upload Your Logo:</label>
+       <input type="file" id="logo-upload" name="logo-upload" accept="image/*" onchange="uploadLogo(event)">
+
+
+
+                <!-- Updated: Number of Stamps with Radio Buttons -->
+                <label>Number of Stamps:</label>
+                <div class="radio-group">
+                   <!-- Updated: Number of Stamps with Radio Buttons for 1 to 10 -->
+<div class="radio-group">
+    <input type="radio" id="stamps-1" name="stamp-count" value="1">
+    <label for="stamps-1">1</label>
+
+    <input type="radio" id="stamps-2" name="stamp-count" value="2">
+    <label for="stamps-2">2</label>
+
+    <input type="radio" id="stamps-3" name="stamp-count" value="3">
+    <label for="stamps-3">3</label>
+
+    <input type="radio" id="stamps-4" name="stamp-count" value="4">
+    <label for="stamps-4">4</label>
+
+    <input type="radio" id="stamps-5" name="stamp-count" value="5">
+    <label for="stamps-5">5</label>
+
+    <input type="radio" id="stamps-6" name="stamp-count" value="6">
+    <label for="stamps-6">6</label>
+
+    <input type="radio" id="stamps-7" name="stamp-count" value="7">
+    <label for="stamps-7">7</label>
+
+    <input type="radio" id="stamps-8" name="stamp-count" value="8">
+    <label for="stamps-8">8</label>
+
+    <input type="radio" id="stamps-9" name="stamp-count" value="9">
+    <label for="stamps-9">9</label>
+
+    <input type="radio" id="stamps-10" name="stamp-count" value="10" checked>
+    <label for="stamps-10">10</label>
+</div>
+
+                </div>
+
+                <label for="stamp-icon">Choose a Stamp Icon:</label>
+                <div class="icon-options">
+                    <input type="radio" id="coffee-icon" name="stamp-icon" value="coffee" checked>
+                    <label for="coffee-icon">
+                        <img src="icons_image/coffee.png" alt="Coffee Cup" class="icon-image">
+                    </label>
+                
+                    <input type="radio" id="star-icon" name="stamp-icon" value="star">
+                    <label for="star-icon">
+                        <img src="icons_image/star.png" alt="Star" class="icon-image">
+                    </label>
+                
+                    <input type="radio" id="heart-icon" name="stamp-icon" value="heart">
+                    <label for="heart-icon">
+                        <img src="icons_image/heart.png" alt="Heart" class="icon-image">
+                    </label>
+                
+                    <input type="radio" id="check-icon" name="stamp-icon" value="check">
+                    <label for="check-icon">
+                        <img src="icons_image/check.png" alt="Checkmark" class="icon-image">
+                    </label>
+                </div>
+                
+                <label for="stamp-color">Stamp Color:</label>
+                <input type="color" id="stamp-color" name="stamp-color" value="#88cabc">
+
+                <label for="bg-color">Background Color:</label>
+                <input type="color" id="bg-color" name="bg-color" value="#d89298">
+
+         
+                <button type="button" onclick="resetCard()">Reset to Default</button>
+                <button type="button" onclick="saveCard()">Save Card</button>
+                            </form>
+        </div>
+
+        <!-- Card Preview Section -->
+        <div class="card-preview-container" id="preview">
+            <h2>Card Preview</h2>
+            <div class="phone-frame">
+                <div class="card-preview" id="card-preview">
+                    <!-- The preview of the custom stamp card will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+ <!-- Footer with contact info -->
+ <footer>
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+        <p>
+            <a href="tel:+77546711" style="color: inherit; text-decoration: none;">
+                <i class="fas fa-phone"></i> Phone:72368600
+            </a>
+        </p>
+        <p>
+            <a href="mailto:pybitacademy@gmail.com" style="color: inherit; text-decoration: none;">
+                <i class="fas fa-envelope"></i> Email:walaa.om@gmail.com
+            </a>
+        </p>
+        <p>
+            <a href="https://www.instagram.com/walaaa.om" target="_blank" style="color: inherit; text-decoration: none;">
+                <i class="fab fa-instagram"></i> Instagram: @walaa.om
+            </a>
+        </p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="custom_card_script.js"></script>
+
+</body>
+
+</html>

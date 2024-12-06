@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbebdb;
+    zoom: 1.5; /* 1.0 is the default, 1.2 is 120% zoom */
+
+}
+
+/* App Bar (Navbar) Styles */
+.app-bar {
+    background-color: #d89298;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-bar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+footer {
+    background-color: #d89298;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+.scan-button{
+color: white;
+background-color: #88cabc;
+
+
+}
+.nav-links a:hover, .nav-links a:active {
+    background-color: #b64d57;
+    border-radius: 5px;
+}
+
+/* Home Page Content Styles */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: left;
+}
+
+.image-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 80%; /* Adjust image size */
+    max-width: 400px;
+}
+
+.text-container {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.text-container h1 {
+    font-size: 36px;
+    color: #d89298;
+}
+
+.text-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+.cta-button {
+    background-color: #d89298;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b64d57;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    height: 800px; /* Set the initial width of the image */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition effect */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Hover effect */
+.image-container img:hover {
+    transform: scale(1.1); /* Scale the image up */
+    opacity: 0.9; /* Slightly reduce the opacity */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    opacity: 0.8; /* Reduce opacity for hover effect */
+}

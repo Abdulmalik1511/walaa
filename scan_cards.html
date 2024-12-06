@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .card-info {
+            margin-bottom: 20px;
+        }
+        .scan-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #qr-reader {
+            width: 400px;
+            height:400px;
+            margin: 20px auto;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+       <!-- Header -->
+       <header class="app-bar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="icons_image/logo.png" alt="Business Logo" class="logo-image">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="my_cards.html">My Card</a>
+            <a href="custom_card.html">Create Card</a>
+            <a href="scan_cards.html">Scan page</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Card Scaner</h1>
+        <!-- Dynamic Customer Cards Section -->
+     <br>
+        <!-- QR Reader Container -->
+        <div id="qr-reader"></div>
+        <div class="scan-button" onclick="scanCards()">Scan Cards</div>
+    </div>
+
+
+<!-- Footer with contact info -->
+<footer>
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+        <p>
+            <a href="tel:+77546711" style="color: inherit; text-decoration: none;">
+                <i class="fas fa-phone"></i> Phone:72368600
+            </a>
+        </p>
+        <p>
+            <a href="mailto:pybitacademy@gmail.com" style="color: inherit; text-decoration: none;">
+                <i class="fas fa-envelope"></i> Email:walaa.om@gmail.com
+            </a>
+        </p>
+        <p>
+            <a href="https://www.instagram.com/walaaa.om" target="_blank" style="color: inherit; text-decoration: none;">
+                <i class="fab fa-instagram"></i> Instagram: @walaa.om
+            </a>
+        </p>
+    </div>
+</footer>
+
+
+
+
+
+
+    <!-- Include the QR code library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script src="manage_cards_script.js"></script>
+</body>
+</html>

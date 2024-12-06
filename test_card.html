@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Test Card</title>
+    <link rel="stylesheet" href="testcard.css">
+</head>
+<body>
+
+    <!-- Card Container -->
+    <div class="card-test-container" id="preview">
+        <div class="phone-frame">
+            <!-- Card Content -->
+            <div class="card-test" id="card-test">
+                <!-- Logo at the top of the card -->
+                <div class="card-logo">
+                    <img src="icons_image/logo.png" alt="Card Logo" class="card-logo-image">
+                </div>
+                
+                <!-- Card Title and Description -->
+                <h2 class="card-title">Your Card Title</h2>
+                <p class="card-description">Your card description goes here.</p>
+
+                <!-- Stamp Card Section -->
+                <div class="stamp-card" id="stamp-card">
+                    <!-- Stamps will be dynamically generated here -->
+                </div>
+
+                <!-- QR Code Section -->
+                <div id="qr-code" class="qr-code"></div> <!-- QR Code Container -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="testCard.js"></script>
+
+</body>
+</html>
